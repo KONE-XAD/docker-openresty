@@ -9,7 +9,12 @@ pipeline {
   stages {
     stage('build-code') {
       steps {
-        sh 'npm install'
+        sh '''echo hello
+while :
+do
+    echo 1
+    sleep 2
+done'''
       }
     }
   }
