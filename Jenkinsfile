@@ -10,12 +10,13 @@ pipeline {
       steps {
         sh '''hostname
 pwd
-cat /etc/hosts'''
+cat /etc/hosts
+nginx'''
       }
     }
     stage('error') {
       steps {
-        input(message: 'stop or wait', id: '123', ok: '465', submitter: '123', submitterParameter: '456')
+        input(message: 'stop or wait', id: '123', ok: '465', submitter: 'stop', submitterParameter: 'wait')
       }
     }
   }
