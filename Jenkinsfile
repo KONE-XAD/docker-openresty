@@ -10,11 +10,10 @@ pipeline {
       steps {
         sh '''hostname
 pwd
-cat /etc/hosts
-curl 127.0.0.1'''
+cat /etc/hosts'''
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         input(message: 'stop or wait', id: '123', ok: '465', submitter: '123', submitterParameter: '456')
       }
