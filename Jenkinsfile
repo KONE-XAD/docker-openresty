@@ -11,7 +11,7 @@ pipeline {
         sh '''hostname
 pwd
 cat /etc/hosts
-nginx -g \'daemon off;\''''
+curl 127.0.0.1'''
       }
     }
   }
