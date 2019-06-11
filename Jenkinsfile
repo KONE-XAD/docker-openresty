@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'nignx:latest'
       args '--name $dockerv'
+      image 'nginx:latest'
     }
 
   }
