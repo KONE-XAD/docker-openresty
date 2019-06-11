@@ -2,7 +2,9 @@ pipeline {
   agent {
     docker {
       image 'docker.io/nginx:latest'
-      args '-P'
+      args '''pwd
+hostname
+echo $dockerv'''
     }
 
   }
