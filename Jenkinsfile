@@ -11,7 +11,7 @@ pipeline {
         sh '''hostname
 pwd
 cat /etc/hosts
-nginx'''
+nginx -g \'daemon off\''''
       }
     }
   }
