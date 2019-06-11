@@ -16,7 +16,7 @@ nginx'''
     }
     stage('error') {
       steps {
-        input(message: 'stop or wait', id: '123', ok: '465', submitter: 'stop', submitterParameter: 'wait')
+        input(message: 'stop or wait', id: 'Procced', ok: 'Abort', submitter: 'Procced', submitterParameter: 'Abort')
       }
     }
   }
