@@ -1,25 +1,15 @@
 pipeline {
   agent {
     docker {
-      image 'nginx:latest'
+      image 'node:6-alpine'
+      args '-p 3000:3000'
     }
 
   }
   stages {
-    stage('get-code') {
+    stage('build-code') {
       steps {
-        git(url: 'https://github.com/KONE-XAD/docker-openresty.git', branch: 'master', changelog: true, poll: true)
-      }
-    }
-    stage('hello') {
-      environment {
-        step = 'first'
-      }
-      steps {
-        sh '''echo hello world
-echo $step
-pwd
-hostname'''
+        sh 'npm install'
       }
     }
   }
